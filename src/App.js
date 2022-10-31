@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Gallery from './components/gallery';
 function App() {
 
   let [artId, setArtId] = useState(12720)
@@ -14,7 +15,11 @@ function App() {
 
   return (
     <div className="App">
-
+      <Gallery
+        objectImg={data.primaryImage}
+        artist={data.artistDisplayName}
+        title={data.title}
+      />
     </div>
   );
 }
